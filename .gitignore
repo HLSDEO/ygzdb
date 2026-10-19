@@ -1,3 +1,15 @@
+# Build output
+/build/
+/export/
+
+# Generated executables & disc images
+*.exe
+*.elf
+*.map
 *.iso
 *.bin
 *.cue
+
+# dumpsxiso artifacts (regenerated on inspect)
+/CARTAS/
+/CARTAS.xml
