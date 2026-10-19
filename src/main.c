@@ -101,7 +101,7 @@ int main(void) {
 				break;
 
 			case ST_DUEL:
-				duel_update(&duel);
+				duel_update(&duel, btn);
 				if (duel_finished(&duel)) {
 					if (btn & (1 << 3))   /* START = title */
 						go_title();

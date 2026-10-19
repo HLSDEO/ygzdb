@@ -129,12 +129,11 @@ void duel_render(const Duel *d) {
 
 	/* ---- Player bar ---- */
 	draw_lp_bar(4, 140, d->you.lp, "YOU", d->turn == 1);
-	sprintf(s, "HAND %d  DECK %d", d->you.hand_count, d->you.deck_count);
-	gfx_text(140, 140, s, C_LGRAY);
 
-	/* Phase indicator */
+	/* Phase indicator (right) */
 	{
 		const char *pn = "?";
+		int px;
 		switch (d->phase) {
 			case PHASE_DRAW:   pn = "DRAW";   break;
 			case PHASE_MAIN:   pn = "MAIN";   break;
@@ -142,7 +141,11 @@ void duel_render(const Duel *d) {
 			case PHASE_END:    pn = "END";    break;
 		}
 		sprintf(s, "TURN %d  %s", d->turn, pn);
-		gfx_text(SCREEN_W - gfx_text_width(s) - 4, 140, s, C_CYAN);
+		px = SCREEN_W - gfx_text_width(s) - 4;
+		gfx_text(px, 140, s, C_CYAN);
+
+		sprintf(s, "HAND %d  DECK %d", d->you.hand_count, d->you.deck_count);
+		gfx_text(px - gfx_text_width(s) - 6, 140, s, C_LGRAY);
 	}
 
 	/* ---- Hand ---- */

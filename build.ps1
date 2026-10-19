@@ -15,12 +15,13 @@ Write-Host "== Cartas do Destino - PS1 build ==" -ForegroundColor Cyan
 
 $buildScript = @'
 set -e
-rm -rf build CARTAS.bin CARTAS.cue CARTAS.iso
+rm -rf build export
+mkdir -p export
 cmake --preset default
 cmake --build --preset default
 cp -f build/GAME.exe iso_root/GAME.EXE
 mkpsxiso -y iso.xml
-ls -la CARTAS.bin CARTAS.cue
+ls -la export/
 '@
 
 $tmp = Join-Path $env:TEMP "ps1_build_$([guid]::NewGuid().ToString('N')).sh"
@@ -33,8 +34,8 @@ try {
     Remove-Item $tmp -ErrorAction SilentlyContinue
 }
 
-$bin = Join-Path $root "CARTAS.bin"
-$cue = Join-Path $root "CARTAS.cue"
+$bin = Join-Path $root "export\CARTAS.bin"
+$cue = Join-Path $root "export\CARTAS.cue"
 if (Test-Path $bin) {
     $size = (Get-Item $bin).Length
     Write-Host ""
@@ -42,7 +43,7 @@ if (Test-Path $bin) {
     Write-Host "Imagem: $bin ($([math]::Round($size/1KB,1)) KB)"
     Write-Host "Cue:    $cue"
     Write-Host ""
-    Write-Host "No DuckStation: File > Open > CARTAS.cue (ou CARTAS.bin)"
+    Write-Host "No DuckStation: File > Open > export\CARTAS.cue"
 } else {
     throw "Image not generated"
 }

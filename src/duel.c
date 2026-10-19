@@ -368,9 +368,7 @@ void duel_init(Duel *d) {
 	wait_then(d, 70);
 }
 
-void duel_update(Duel *d) {
-	uint32_t btn = pads_pressed();
-
+void duel_update(Duel *d, uint32_t btn) {
 	if (d->flash_timer > 0)
 		d->flash_timer--;
 

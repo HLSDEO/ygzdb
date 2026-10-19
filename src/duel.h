@@ -40,7 +40,7 @@ typedef struct {
 } Duel;
 
 void duel_init(Duel *d);
-void duel_update(Duel *d);
+void duel_update(Duel *d, uint32_t btn);
 void duel_render(const Duel *d);
 int  duel_finished(const Duel *d);
 
