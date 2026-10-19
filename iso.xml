@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<iso_project image_name="CARTAS.iso">
+<iso_project image_name="CARTAS.bin" cue_sheet="CARTAS.cue">
 	<track type="data" cdvd_style="false">
 		<identifiers
 			system       ="PLAYSTATION"

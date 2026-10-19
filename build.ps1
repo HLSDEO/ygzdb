@@ -13,16 +13,15 @@ if ($Shell) {
 
 Write-Host "== Cartas do Destino - PS1 build ==" -ForegroundColor Cyan
 
-$buildScript = @"
+$buildScript = @'
 set -e
-$(if ($Clean) { "rm -rf build CARTAS.iso" })
-rm -rf build
+rm -rf build CARTAS.bin CARTAS.cue CARTAS.iso
 cmake --preset default
 cmake --build --preset default
 cp -f build/GAME.exe iso_root/GAME.EXE
 mkpsxiso -y iso.xml
-ls -la CARTAS.iso
-"@
+ls -la CARTAS.bin CARTAS.cue
+'@
 
 $tmp = Join-Path $env:TEMP "ps1_build_$([guid]::NewGuid().ToString('N')).sh"
 [System.IO.File]::WriteAllText($tmp, $buildScript, (New-Object System.Text.UTF8Encoding($false)))
@@ -34,15 +33,16 @@ try {
     Remove-Item $tmp -ErrorAction SilentlyContinue
 }
 
-$iso = Join-Path $root "CARTAS.iso"
-if (Test-Path $iso) {
-    $size = (Get-Item $iso).Length
+$bin = Join-Path $root "CARTAS.bin"
+$cue = Join-Path $root "CARTAS.cue"
+if (Test-Path $bin) {
+    $size = (Get-Item $bin).Length
     Write-Host ""
     Write-Host "== SUCCESS ==" -ForegroundColor Green
-    Write-Host "ISO: $iso ($([math]::Round($size/1KB,1)) KB)"
+    Write-Host "Imagem: $bin ($([math]::Round($size/1KB,1)) KB)"
+    Write-Host "Cue:    $cue"
     Write-Host ""
-    Write-Host "Teste no DuckStation / PCSX-Redux / Mednafen:"
-    Write-Host "  File > Open > $iso"
+    Write-Host "No DuckStation: File > Open > CARTAS.cue (ou CARTAS.bin)"
 } else {
-    throw "ISO not generated"
+    throw "Image not generated"
 }
