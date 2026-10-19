@@ -18,120 +18,120 @@ draw_card_face t ffffffff800115b4 1cc	/work/src/duel_render.c:5
 draw_slot t ffffffff80011780 270	/work/src/duel_render.c:35
 draw_lp_bar.constprop.0 t ffffffff800119f0 110	/work/src/duel_render.c:58
 duel_render T ffffffff80011b00 658	/work/src/duel_render.c:73
-draw_glyph.part.0 t ffffffff80012158 a8	/work/src/gfx.c:91
-gfx_init T ffffffff80012200 ec	/work/src/gfx.c:14
-gfx_flip T ffffffff800122ec 90	/work/src/gfx.c:36
-gfx_clear T ffffffff8001237c 28	/work/src/gfx.c:52
-gfx_px T ffffffff800123a4 30	/work/src/gfx.c:58
-gfx_fill T ffffffff800123d4 b8	/work/src/gfx.c:64
-gfx_rect T ffffffff8001248c 80	/work/src/gfx.c:79
-gfx_text T ffffffff8001250c a8	/work/src/gfx.c:105
-gfx_text_shadow T ffffffff800125b4 14c	/work/src/gfx.c:115
-gfx_text_width T ffffffff80012700 48	/work/src/gfx.c:120
-pads_init T ffffffff80012748 44	/work/src/gfx.c:156
-pads_pressed T ffffffff8001278c 30	/work/src/gfx.c:168
-main T ffffffff800127bc 35c	/work/src/main.c:86
-_vblank_handler t ffffffff80012b18 28	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:40
-_process_drawop t ffffffff80012b40 a8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:47
-_gpu_irq_handler t ffffffff80012be8 30	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:68
-_gpu_dma_handler t ffffffff80012c18 24	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:75
-_default_vsync_halt t ffffffff80012c3c 58	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:131
-ResetGraph T ffffffff80012c94 12c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:82
-VSync T ffffffff80012dc0 170	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:143
-SetDrawOpType T ffffffff80012f30 10	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:195
-EnqueueDrawOp T ffffffff80012f40 c8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:199
-DrawSync T ffffffff80013008 cc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:239
-_build_drawenv_ot t ffffffff800130d4 1f0	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:37
-SetDefDrawEnv T ffffffff800132c4 54	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:81
-PutDrawEnv T ffffffff80013318 38	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:129
-SetDefDispEnv T ffffffff80013350 34	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:149
-PutDispEnv T ffffffff80013384 18c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:169
-SetVideoMode T ffffffff80013510 54	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:259
-SetDispMask T ffffffff80013564 1c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:276
-_send_linked_list T ffffffff80013580 78	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:15
-_global_dma_handler t ffffffff800135f8 cc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:79
-_global_isr t ffffffff800136c4 bc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:57
-RestartCallback.part.0 t ffffffff80013780 88	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:203
-InterruptCallback T ffffffff80013808 64	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:103
-DMACallback T ffffffff8001386c ec	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:125
-SetDMAPriority T ffffffff80013958 58	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:160
-ResetCallback T ffffffff800139b0 b4	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:183
-EnterCriticalSection T ffffffff80013a64 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:13
-ExitCriticalSection T ffffffff80013a74 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:24
-_96_remove T ffffffff80013a84 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/drivers.s:31
-InitPAD T ffffffff80013a90 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:241
-StartPAD T ffffffff80013a9c 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:249
-ReturnFromException T ffffffff80013aa8 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:265
-HookEntryInt T ffffffff80013ab4 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:281
-ChangeClearPAD T ffffffff80013ac0 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:313
-ChangeClearRCnt T ffffffff80013acc 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:355
-_start W ffffffff80013ad8 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/_start.s:16
-memset T ffffffff80013ae8 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/memset.s:13
-_start_inner T ffffffff80013c38 118	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/start.c:73
-strncpy T ffffffff80013d50 54	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:153
-strlen T ffffffff80013da4 3c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:234
-get_arg_in_size T ffffffff80013de0 b8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:102
-vsnprintf T ffffffff80013e98 dfc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:376
-sprintf T ffffffff80014c94 38	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:788
-InitHeap W ffffffff80014ccc 28	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:40
-CSWTCH.15 r ffffffff80014dfc c
-deck_list r ffffffff80014e08 1e
-card_db R ffffffff80014e28 120
-CSWTCH.39 r ffffffff800152d8 10
-font8x8 r ffffffff800152e8 300
-_isr_jmp_buf r ffffffff80015648 30
-__CTOR_LIST__ D ffffffff80015800 
-__CTOR_END__ D ffffffff80015808 
-__DTOR_LIST__ D ffffffff80015810 
-__DTOR_END__ D ffffffff80015818 
-rng_state d ffffffff80015818 4
-HAND_CARD_H D ffffffff8001581c 4
-HAND_CARD_W D ffffffff80015820 4
-HAND_Y D ffffffff80015824 4
-LOG_Y D ffffffff80015828 4
-YOU_FIELD_Y D ffffffff8001582c 4
-CPU_FIELD_Y D ffffffff80015830 4
-ZONE_H D ffffffff80015834 4
-ZONE_W D ffffffff80015838 4
-_vsync_halt_func d ffffffff8001583c 4
-__bss_start B ffffffff80015840 
-pad_prev b ffffffff80015840 4
-draw_ptr b ffffffff80015844 4
-db_index b ffffffff80015848 4
-frame.0 b ffffffff8001584c 4
-state b ffffffff80015850 4
-_last_hblank b ffffffff80015854 2
-_last_vblank b ffffffff80015858 4
-_vblank_counter b ffffffff8001585c 4
-_drawop_type b ffffffff80015860 1
-_queue_length b ffffffff80015861 1
-_queue_tail b ffffffff80015862 1
-_queue_head b ffffffff80015863 1
-_drawsync_callback b ffffffff80015864 4
-_vsync_callback b ffffffff80015868 4
-_gpu_video_mode B ffffffff8001586c 4
-_isr_installed b ffffffff80015870 4
-_saved_dma_dicr b ffffffff80015874 4
-_saved_dma_dpcr b ffffffff80015878 4
-_saved_irq_mask b ffffffff8001587c 2
-_num_dma_handlers b ffffffff80015880 4
-__argv B ffffffff80015884 4
-__argc B ffffffff80015888 4
-_alloc_tail b ffffffff8001588c 4
-_alloc_head b ffffffff80015890 4
-_alloc_start b ffffffff80015894 4
-_heap_alloc_max b ffffffff80015898 4
-_heap_alloc b ffffffff8001589c 4
-_heap_limit b ffffffff800158a0 4
-_heap_end b ffffffff800158a4 4
-_heap_start b ffffffff800158a8 4
-pad_buff b ffffffff800158ac 44
-draw_env b ffffffff800158f0 80
-disp_env b ffffffff80015970 28
-duel b ffffffff80015998 14c
-_draw_queue b ffffffff80015ae4 100
-_isr_stack b ffffffff80015be4 1000
-_dma_handlers b ffffffff80016be4 1c
-_irq_handlers b ffffffff80016c00 2c
-_end B ffffffff80016c2c 
-_gp d ffffffff8001d810 
+draw_glyph.part.0 t ffffffff80012158 ac	/work/src/gfx.c:82
+gfx_init T ffffffff80012204 68	/work/src/gfx.c:13
+gfx_flip T ffffffff8001226c d8	/work/src/gfx.c:25
+gfx_clear T ffffffff80012344 28	/work/src/gfx.c:43
+gfx_px T ffffffff8001236c 38	/work/src/gfx.c:49
+gfx_fill T ffffffff800123a4 c8	/work/src/gfx.c:55
+gfx_rect T ffffffff8001246c 80	/work/src/gfx.c:70
+gfx_text T ffffffff800124ec a0	/work/src/gfx.c:96
+gfx_text_shadow T ffffffff8001258c 144	/work/src/gfx.c:106
+gfx_text_width T ffffffff800126d0 48	/work/src/gfx.c:111
+pads_init T ffffffff80012718 44	/work/src/gfx.c:147
+pads_pressed T ffffffff8001275c 30	/work/src/gfx.c:159
+main T ffffffff8001278c 35c	/work/src/main.c:86
+_vblank_handler t ffffffff80012ae8 28	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:40
+_process_drawop t ffffffff80012b10 a8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:47
+_gpu_irq_handler t ffffffff80012bb8 30	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:68
+_gpu_dma_handler t ffffffff80012be8 24	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:75
+_default_vsync_halt t ffffffff80012c0c 58	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:131
+ResetGraph T ffffffff80012c64 12c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:82
+VSync T ffffffff80012d90 170	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:143
+SetDrawOpType T ffffffff80012f00 10	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:195
+EnqueueDrawOp T ffffffff80012f10 c8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:199
+DrawSync T ffffffff80012fd8 cc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:239
+SetDefDispEnv T ffffffff800130a4 34	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:149
+PutDispEnv T ffffffff800130d8 18c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:169
+SetVideoMode T ffffffff80013264 54	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:259
+SetDispMask T ffffffff800132b8 1c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:276
+_dma_transfer t ffffffff800132d4 16c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:30
+LoadImage T ffffffff80013440 70	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:72
+_global_dma_handler t ffffffff800134b0 cc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:79
+_global_isr t ffffffff8001357c bc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:57
+RestartCallback.part.0 t ffffffff80013638 88	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:203
+InterruptCallback T ffffffff800136c0 64	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:103
+DMACallback T ffffffff80013724 ec	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:125
+SetDMAPriority T ffffffff80013810 58	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:160
+ResetCallback T ffffffff80013868 b4	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:183
+EnterCriticalSection T ffffffff8001391c 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:13
+ExitCriticalSection T ffffffff8001392c 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:24
+_96_remove T ffffffff8001393c 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/drivers.s:31
+InitPAD T ffffffff80013948 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:241
+StartPAD T ffffffff80013954 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:249
+ReturnFromException T ffffffff80013960 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:265
+HookEntryInt T ffffffff8001396c 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:281
+ChangeClearPAD T ffffffff80013978 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:313
+ChangeClearRCnt T ffffffff80013984 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:355
+_start W ffffffff80013990 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/_start.s:16
+memset T ffffffff800139a0 	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/memset.s:13
+_start_inner T ffffffff80013af0 118	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/start.c:73
+strncpy T ffffffff80013c08 54	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:153
+strlen T ffffffff80013c5c 3c	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:234
+get_arg_in_size T ffffffff80013c98 b8	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:102
+vsnprintf T ffffffff80013d50 dfc	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:376
+sprintf T ffffffff80014b4c 38	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:788
+InitHeap W ffffffff80014b84 28	/home/runner/work/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:40
+CSWTCH.15 r ffffffff80014cb4 c
+deck_list r ffffffff80014cc0 1e
+card_db R ffffffff80014ce0 120
+CSWTCH.39 r ffffffff80015190 10
+font8x8 r ffffffff800151a0 300
+_isr_jmp_buf r ffffffff80015500 30
+__CTOR_LIST__ D ffffffff800156b0 
+__CTOR_END__ D ffffffff800156b8 
+__DTOR_LIST__ D ffffffff800156c0 
+__DTOR_END__ D ffffffff800156c8 
+rng_state d ffffffff800156c8 4
+HAND_CARD_H D ffffffff800156cc 4
+HAND_CARD_W D ffffffff800156d0 4
+HAND_Y D ffffffff800156d4 4
+LOG_Y D ffffffff800156d8 4
+YOU_FIELD_Y D ffffffff800156dc 4
+CPU_FIELD_Y D ffffffff800156e0 4
+ZONE_H D ffffffff800156e4 4
+ZONE_W D ffffffff800156e8 4
+_vsync_halt_func d ffffffff800156ec 4
+__bss_start B ffffffff800156f0 
+pad_prev b ffffffff800156f0 4
+db_index b ffffffff800156f4 4
+draw_ptr b ffffffff800156f8 4
+frame.0 b ffffffff800156fc 4
+state b ffffffff80015700 4
+_last_hblank b ffffffff80015704 2
+_last_vblank b ffffffff80015708 4
+_vblank_counter b ffffffff8001570c 4
+_drawop_type b ffffffff80015710 1
+_queue_length b ffffffff80015711 1
+_queue_tail b ffffffff80015712 1
+_queue_head b ffffffff80015713 1
+_drawsync_callback b ffffffff80015714 4
+_vsync_callback b ffffffff80015718 4
+_gpu_video_mode B ffffffff8001571c 4
+_next_saved_rect b ffffffff80015720 4
+_isr_installed b ffffffff80015724 4
+_saved_dma_dicr b ffffffff80015728 4
+_saved_dma_dpcr b ffffffff8001572c 4
+_saved_irq_mask b ffffffff80015730 2
+_num_dma_handlers b ffffffff80015734 4
+__argv B ffffffff80015738 4
+__argc B ffffffff8001573c 4
+_alloc_tail b ffffffff80015740 4
+_alloc_head b ffffffff80015744 4
+_alloc_start b ffffffff80015748 4
+_heap_alloc_max b ffffffff8001574c 4
+_heap_alloc b ffffffff80015750 4
+_heap_limit b ffffffff80015754 4
+_heap_end b ffffffff80015758 4
+_heap_start b ffffffff8001575c 4
+pad_buff b ffffffff80015780 44
+disp_env b ffffffff800157c4 14
+framebuf b ffffffff80015800 4b000
+_gp d ffffffff8001d6c0 
+duel b ffffffff80060800 14c
+_draw_queue b ffffffff8006094c 100
+_saved_rects b ffffffff80060a4c 80
+_isr_stack b ffffffff80060acc 1000
+_dma_handlers b ffffffff80061acc 1c
+_irq_handlers b ffffffff80061ae8 2c
+_end B ffffffff80061b14 

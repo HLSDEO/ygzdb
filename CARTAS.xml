@@ -1,11 +1,11 @@
 <iso_project image_name="mkpsxiso.bin" cue_sheet="mkpsxiso.cue">
     <track type="data" cdvd_style="false">
-        <identifiers system="PLAYSTATION" application="PLAYSTATION" volume="CARTAS" volume_set="CARTAS" publisher="HOMEBREW" data_preparer="PSN00BSDK" copyright="2026 HOMEBREW" creation_date="2026101917083200+36"/>
+        <identifiers system="PLAYSTATION" application="PLAYSTATION" volume="CARTAS" volume_set="CARTAS" publisher="HOMEBREW" data_preparer="PSN00BSDK" copyright="2026 HOMEBREW" creation_date="2026101919031200+36"/>
         <license file="CARTAS/license_data.dat"/>
         <default_attributes gmt_offs="36" xa_attrib="255" xa_perm="1365" xa_gid="0" xa_uid="0"/>
-        <directory_tree offs="22">
-            <file name="SYSTEM.CNF" source="CARTAS/SYSTEM.CNF" type="data" date="20261019165211" offs="23"/>
-            <file name="GAME.EXE" source="CARTAS/GAME.EXE" type="data" date="20261019170832" offs="24"/>
+        <directory_tree source="CARTAS">
+            <file name="SYSTEM.CNF" type="data" date="20261019165211"/>
+            <file name="GAME.EXE" type="data" date="20261019190312"/>
         </directory_tree>
     </track>
 </iso_project>

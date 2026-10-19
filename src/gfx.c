@@ -3,48 +3,39 @@
 #include "gfx.h"
 #include "font8x8.h"
 
-/* --- Double-buffered VRAM software renderer --- */
+/* Software renderer: draw in main RAM, upload to VRAM via LoadImage. */
 
-static DISPENV disp_env[2];
-static DRAWENV draw_env[2];
-static volatile uint16_t *vram = (volatile uint16_t *)0x80100000;
-static int db_index;
+static uint16_t framebuf[2][SCREEN_W * SCREEN_H] __attribute__((aligned(64)));
 static uint16_t *draw_ptr;
+static int db_index;
+static DISPENV disp_env;
 
 void gfx_init(void) {
 	ResetGraph(0);
 	SetVideoMode(MODE_NTSC);
 
-	SetDefDispEnv(&disp_env[0], 0, 0,        SCREEN_W, SCREEN_H);
-	SetDefDrawEnv(&draw_env[0], 0, SCREEN_H, SCREEN_W, SCREEN_H);
-	SetDefDispEnv(&disp_env[1], 0, SCREEN_H, SCREEN_W, SCREEN_H);
-	SetDefDrawEnv(&draw_env[1], 0, 0,        SCREEN_W, SCREEN_H);
-
-	draw_env[0].isbg = 0;
-	draw_env[1].isbg = 0;
-	draw_env[0].dtd  = 0;
-	draw_env[1].dtd  = 0;
-
 	db_index = 0;
-	PutDispEnv(&disp_env[0]);
-	PutDrawEnv(&draw_env[0]);
-	SetDispMask(1);
+	draw_ptr = framebuf[0];
 
-	draw_ptr = (uint16_t *)(vram + (size_t)SCREEN_H * VRAM_W);
+	SetDefDispEnv(&disp_env, 0, 0, SCREEN_W, SCREEN_H);
+	PutDispEnv(&disp_env);
+	SetDispMask(1);
 }
 
 void gfx_flip(void) {
+	RECT rect;
+	int vram_y = db_index * SCREEN_H;
+
+	setRECT(&rect, 0, vram_y, SCREEN_W, SCREEN_H);
+	LoadImage(&rect, (const uint32_t *)framebuf[db_index]);
 	DrawSync(0);
 	VSync(0);
 
-	db_index ^= 1;
-	PutDispEnv(&disp_env[db_index]);
-	PutDrawEnv(&draw_env[db_index]);
+	SetDefDispEnv(&disp_env, 0, vram_y, SCREEN_W, SCREEN_H);
+	PutDispEnv(&disp_env);
 
-	if (db_index == 0)
-		draw_ptr = (uint16_t *)(vram + (size_t)SCREEN_H * VRAM_W);
-	else
-		draw_ptr = (uint16_t *)vram;
+	db_index ^= 1;
+	draw_ptr = framebuf[db_index];
 }
 
 /* --- Drawing primitives --- */
@@ -58,7 +49,7 @@ void gfx_clear(uint16_t color) {
 void gfx_px(int x, int y, uint16_t color) {
 	if (x < 0 || x >= SCREEN_W || y < 0 || y >= SCREEN_H)
 		return;
-	draw_ptr[y * VRAM_W + x] = color;
+	draw_ptr[y * SCREEN_W + x] = color;
 }
 
 void gfx_fill(int x, int y, int w, int h, uint16_t color) {
@@ -70,7 +61,7 @@ void gfx_fill(int x, int y, int w, int h, uint16_t color) {
 	if (w <= 0 || h <= 0) return;
 
 	for (j = y; j < y + h; j++) {
-		uint16_t *p = draw_ptr + j * VRAM_W + x;
+		uint16_t *p = draw_ptr + j * SCREEN_W + x;
 		for (i = 0; i < w; i++)
 			p[i] = color;
 	}
