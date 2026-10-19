@@ -1,5 +1,6 @@
 #include <psxgpu.h>
 #include <psxapi.h>
+#include <psxpad.h>
 #include "gfx.h"
 #include "font8x8.h"
 
@@ -146,14 +147,24 @@ static uint32_t pad_prev;
 
 void pads_init(void) {
 	InitPAD(pad_buff[0], 34, pad_buff[1], 34);
+	/* InitPAD zerofills buffers (= all buttons "pressed") until first IRQ.
+	   Mark status as timeout so pads_held reads 0 until real data arrives. */
+	pad_buff[0][0] = 0xFF;
+	pad_buff[1][0] = 0xFF;
 	StartPAD();
 	ChangeClearPAD(0);
 	pad_prev = 0;
 }
 
 uint32_t pads_held(void) {
-	uint16_t raw = (uint16_t)pad_buff[0][3] | ((uint16_t)pad_buff[0][4] << 8);
-	return (~raw) & 0xFFFF;
+	const PADTYPE *pad = (const PADTYPE *)pad_buff[0];
+	if (pad->stat != 0)
+		return 0;
+	if (pad->type != PAD_ID_DIGITAL && pad->type != PAD_ID_ANALOG_STICK &&
+	    pad->type != PAD_ID_ANALOG)
+		return 0;
+	/* pad->btn is active low (0 = pressed) */
+	return (~pad->btn) & 0xFFFF;
 }
 
 uint32_t pads_pressed(void) {
