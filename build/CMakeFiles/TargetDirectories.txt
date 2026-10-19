@@ -1,0 +1,7 @@
+/work/build/CMakeFiles/GAME.dir
+/work/build/CMakeFiles/edit_cache.dir
+/work/build/CMakeFiles/rebuild_cache.dir
+/work/build/CMakeFiles/list_install_components.dir
+/work/build/CMakeFiles/install.dir
+/work/build/CMakeFiles/install/local.dir
+/work/build/CMakeFiles/install/strip.dir
